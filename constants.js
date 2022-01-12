@@ -1,4 +1,4 @@
-const invalidInputText = 'invalid input';
+const invalidInputText = 'validation error';
 const articleNotFoundText = 'article not found';
 const resourceFobiddenText = 'requested resource is forbidden';
 const articleDeletedText = 'article deleted';

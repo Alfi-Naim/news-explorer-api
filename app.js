@@ -21,7 +21,6 @@ const app = express();
 
 mongoose.connect(NODE_ENV === 'production' ? DB_ADDRESS : devDbAddress);
 
-app.use(limiter);
 app.use(cors());
 app.options('*', cors());
 
@@ -30,6 +29,7 @@ app.use(bodyParser);
 app.use(requestLogger);
 app.use(errors());
 
+app.use(limiter);
 app.use('/', mainRouter);
 app.get('*', () => {
   throw new NotFoundError(resourceNotFoundText);
